@@ -7,9 +7,9 @@ import java.util.List;
 public interface UserStorage {
     List<User> getFriends(int id);
 
-    User addFriend(int id, int friendId);
+    boolean addFriend(int id, int friendId);
 
-    User deleteFriend(int id, int friendId);
+    void deleteFriend(int id, int friendId);
 
     List<User> getCommonFriends(int id, int otherId);
 
@@ -20,4 +20,6 @@ public interface UserStorage {
     List<User> getALlUsers();
 
     User getUser(int id);
+
+    boolean existsUser(int id);
 }
