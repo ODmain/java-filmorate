@@ -10,13 +10,15 @@ public interface FilmStorage {
 
     List<Film> getTopTenOfFilms(int count);
 
-    Film addLike(int id, int userId);
+    boolean addLike(int id, int userId);
 
-    Film deleteLike(int id, int userId);
+    boolean deleteLike(int id, int userId);
 
     Film createFilm(Film film);
 
     Film updateFilm(Film film);
 
     List<Film> getALlFilms();
+
+    boolean existsFilm(int id);
 }
